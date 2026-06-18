@@ -3,7 +3,13 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorageLS",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"StorageEndpoint": {
+					"value": "@pipeline().globalParameters.StorageEndpoint",
+					"type": "Expression"
+				}
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",

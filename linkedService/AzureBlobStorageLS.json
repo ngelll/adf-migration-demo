@@ -4,8 +4,13 @@
 	"properties": {
 		"type": "AzureBlobStorage",
 		"annotations": [],
+		"parameters": {
+			"StorageEndpoint": {
+				"type": "String"
+			}
+		},
 		"typeProperties": {
-			"serviceEndpoint": "https://stadfdemobe002d.blob.core.windows.net",
+			"serviceEndpoint": "@{linkedService().StorageEndpoint}",
 			"accountKind": "StorageV2"
 		}
 	}
