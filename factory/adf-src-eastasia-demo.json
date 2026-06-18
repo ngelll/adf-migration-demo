@@ -1,0 +1,15 @@
+{
+	"name": "adf-src-eastasia-demo",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "05dca201-fbd5-437f-ace7-1b88030ce428",
+		"tenantId": "5555490f-5b00-4154-8a76-b2d88d082469"
+	}
+}
