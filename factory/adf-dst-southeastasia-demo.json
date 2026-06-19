@@ -4,6 +4,12 @@
 		"trustModeClaimForMi": {
 			"value": "Disabled",
 			"editable": true
+		},
+		"globalParameters": {
+			"StorageEndpoint": {
+				"type": "String",
+				"value": "https://stadfdemosea7660.blob.core.windows.net"
+			}
 		}
 	},
 	"location": "southeastasia",
