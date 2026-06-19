@@ -6,9 +6,14 @@
 			"type": "LinkedServiceReference",
 			"parameters": {
 				"StorageEndpoint": {
-					"value": "@pipeline().globalParameters.StorageEndpoint",
+					"value": "@dataset().StorageEndpoint",
 					"type": "Expression"
 				}
+			}
+		},
+		"parameters": {
+			"StorageEndpoint": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
