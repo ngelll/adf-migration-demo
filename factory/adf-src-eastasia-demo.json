@@ -5,10 +5,6 @@
 			"StorageEndpoint": {
 				"type": "String",
 				"value": "https://stadfdemobe002d.blob.core.windows.net"
-			},
-			"test": {
-				"type": "string",
-				"value": "1234"
 			}
 		},
 		"trustModeClaimForMi": {
