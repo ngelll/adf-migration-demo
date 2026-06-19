@@ -9,7 +9,7 @@
 		},
 		"AzureBlobStorageLS_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "https://stadfdemobe002d.blob.core.windows.net"
+			"defaultValue": "@{linkedService().StorageEndpoint}"
 		}
 	},
 	"variables": {
@@ -21,6 +21,11 @@
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"parameters": {
+					"StorageEndpoint": {
+						"type": "String"
+					}
+				},
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
@@ -37,7 +42,18 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "AzureBlobStorageLS",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"StorageEndpoint": {
+							"value": "@dataset().StorageEndpoint",
+							"type": "Expression"
+						}
+					}
+				},
+				"parameters": {
+					"StorageEndpoint": {
+						"type": "String"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -65,7 +81,18 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "AzureBlobStorageLS",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"StorageEndpoint": {
+							"value": "@dataset().StorageEndpoint",
+							"type": "Expression"
+						}
+					}
+				},
+				"parameters": {
+					"StorageEndpoint": {
+						"type": "String"
+					}
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -141,14 +168,24 @@
 							{
 								"referenceName": "SourceCsvDataset",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"StorageEndpoint": {
+										"value": "@pipeline().globalParameters.StorageEndpoint",
+										"type": "Expression"
+									}
+								}
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DestinationCsvDataset",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"StorageEndpoint": {
+										"value": "@pipeline().globalParameters.StorageEndpoint",
+										"type": "Expression"
+									}
+								}
 							}
 						]
 					}

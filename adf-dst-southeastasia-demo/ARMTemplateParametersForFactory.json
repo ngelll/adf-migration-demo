@@ -6,7 +6,7 @@
 			"value": "adf-dst-southeastasia-demo"
 		},
 		"AzureBlobStorageLS_properties_typeProperties_serviceEndpoint": {
-			"value": "https://stadfdemobe002d.blob.core.windows.net"
+			"value": "@{linkedService().StorageEndpoint}"
 		}
 	}
 }

@@ -9,7 +9,7 @@
 		},
 		"AzureBlobStorageLS_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "https://stadfdemobe002d.blob.core.windows.net"
+			"defaultValue": "@{linkedService().StorageEndpoint}"
 		},
 		"containerUri": {
 			"type": "string",
