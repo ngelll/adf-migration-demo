@@ -1,15 +1,19 @@
 {
 	"name": "adf-src-eastasia-demo",
 	"properties": {
-		"trustModeClaimForMi": {
-			"value": "Disabled",
-			"editable": true
-		},
 		"globalParameters": {
 			"StorageEndpoint": {
 				"type": "String",
 				"value": "https://stadfdemobe002d.blob.core.windows.net"
+			},
+			"test": {
+				"type": "string",
+				"value": "1234"
 			}
+		},
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
 		}
 	},
 	"location": "eastasia",
