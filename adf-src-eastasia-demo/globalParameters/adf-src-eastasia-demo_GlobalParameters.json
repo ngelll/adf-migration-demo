@@ -1,0 +1,6 @@
+{
+	"StorageEndpoint": {
+		"type": "String",
+		"value": "https://stadfdemobe002d.blob.core.windows.net"
+	}
+}
